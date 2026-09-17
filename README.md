@@ -18,3 +18,7 @@
 ## Журнал применения ИИ
 
 ИИ использовался для генерации структуры интерфейса, модульного JavaScript и CSS. Архитектура, источники API и тексты проверены вручную.
+
+Сайт: https://dyslexis333.github.io/faceit-card
+
+GitHub: https://github.com/dyslexis333
