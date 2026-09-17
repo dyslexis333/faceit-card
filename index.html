@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Личный игровой дашборд dyslexis" />
+    <title>dyslexis / match room</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Match room — наверх"><span class="brand-mark">+</span><span>match room</span></a>
+        <div class="topbar-meta"><span class="status-dot"></span><span>CS2 / FACEIT</span><span class="topbar-divider"></span><span id="current-date">17 SEP 2026</span></div>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Переключить тему" title="Переключить тему">◐</button>
+      </header>
+
+      <main id="top">
+        <section class="hero section-wrap">
+          <div class="hero-copy"><p class="eyebrow">PLAYER PROFILE <span>/ 001</span></p><h1>dyslexis<span class="accent">.</span></h1><p class="hero-note">Личная игровая статистика<br />и история матчей в одном месте.</p><div class="hero-links"><a href="https://www.faceit.com/ru/players/dyslexis" target="_blank" rel="noreferrer">Открыть Faceit ↗</a><a href="https://ru.faceitanalyser.com/stats/dyslexis/cs2" target="_blank" rel="noreferrer">Faceit Analyser ↗</a></div></div>
+          <div class="hero-score"><div class="score-label">CURRENT ELO</div><div class="score-value">3 005</div><div class="score-change">+30 <span>↗ LAST MATCH</span></div><div class="rank-line"><span>LEVEL 10</span><span>TOP 0.43%</span></div><div class="progress-track"><span style="width: 100%"></span></div><div class="profile-counters"><span>🇷🇺 <b>1 613</b></span><span>🇪🇺 <b>5 722</b></span></div></div>
+        </section>
+
+        <section class="section-wrap stats-grid" aria-label="Ключевые показатели"><article class="stat-card"><span class="stat-index">01</span><div class="stat-name">MATCHES</div><strong>2 407</strong><small>1 230 побед · 1 177 поражений</small></article><article class="stat-card"><span class="stat-index">02</span><div class="stat-name">WIN RATE</div><strong>51.1<span>%</span></strong><small class="positive">данные Faceit Analyser</small></article><article class="stat-card"><span class="stat-index">03</span><div class="stat-name">AVG. KDR</div><strong>1.08</strong><small>Avg. KPR: 0.78</small></article><article class="stat-card accent-card"><span class="stat-index">04</span><div class="stat-name">FA RATING</div><strong>1.22</strong><small>HLTV: 1.26</small></article></section>
+
+        <section class="section-wrap content-grid">
+          <div class="panel performance-panel"><div class="panel-heading"><div><p class="eyebrow">PERFORMANCE</p><h2>Форма по неделям</h2></div><span class="panel-kicker">LAST 8 WEEKS</span></div><div class="chart-wrap"><div class="chart-y"><span>60%</span><span>50%</span><span>40%</span><span>30%</span></div><div class="chart"><div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div><svg viewBox="0 0 760 220" role="img" aria-label="График процента побед"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#d9f65a" stop-opacity=".25"/><stop offset="1" stop-color="#d9f65a" stop-opacity="0"/></linearGradient></defs><path class="area" d="M0,167 L108,148 L216,157 L324,115 L432,126 L540,79 L648,93 L760,52 L760,220 L0,220Z"/><path class="line" d="M0,167 L108,148 L216,157 L324,115 L432,126 L540,79 L648,93 L760,52"/><circle cx="760" cy="52" r="5"/></svg><div class="chart-x"><span>ИЮЛ 22</span><span>ИЮЛ 29</span><span>АВГ 05</span><span>АВГ 12</span><span>АВГ 19</span><span>АВГ 26</span><span>СЕН 02</span><span>СЕН 09</span></div></div></div></div>
+          <div class="side-stack"><article class="panel api-panel" id="quote-widget"><div class="panel-heading"><div><p class="eyebrow">API / QUOTE</p><h2>Раунд начинается<br />с головы.</h2></div><button class="refresh-button" data-refresh="quote" aria-label="Обновить цитату" title="Обновить цитату">↻</button></div><p class="quote-author" id="quote-author">Загрузка...</p><div class="api-state" id="quote-state" aria-live="polite"></div></article><article class="panel api-panel" id="github-widget"><div class="panel-heading"><div><p class="eyebrow">API / SIGNAL</p><h2>Внешний сигнал</h2></div><span class="live-badge">LIVE</span></div><div class="signal-row"><div class="avatar" id="github-avatar">D</div><div><strong id="github-name">Загрузка...</strong><p id="github-bio">Получаем открытые данные профиля</p></div></div><div class="signal-stats"><span><b id="github-repos">—</b> REPOS</span><span><b id="github-followers">—</b> FOLLOWERS</span></div><div class="api-state" id="github-state" aria-live="polite"></div></article></div>
+        </section>
+
+        <section class="section-wrap lower-grid"><div class="panel matches-panel"><div class="panel-heading"><div><p class="eyebrow">RECENT MATCHES</p><h2>Последние игры</h2></div><button class="text-button" id="add-match" type="button">+ Добавить матч</button></div><div class="match-list" id="match-list"><div class="match-row"><span class="match-map">MIRAGE</span><span class="match-result win">WIN</span><strong>13 : 9</strong><span class="match-meta">Premier · 42 мин</span></div><div class="match-row"><span class="match-map">ANCIENT</span><span class="match-result loss">LOSS</span><strong>11 : 13</strong><span class="match-meta">Premier · 51 мин</span></div><div class="match-row"><span class="match-map">INFERNO</span><span class="match-result win">WIN</span><strong>13 : 7</strong><span class="match-meta">Faceit · 38 мин</span></div><div class="match-row"><span class="match-map">NUKE</span><span class="match-result win">WIN</span><strong>13 : 10</strong><span class="match-meta">Faceit · 47 мин</span></div></div></div><aside class="panel note-panel"><p class="eyebrow">LOADOUT NOTE</p><h2>Играю от<br /><em>темпа.</em></h2><p>Лучший перформанс — в первых раундах. Не отдавать инициативу.</p><div class="note-footer"><span>LAST EDIT</span><b>09.09.26</b></div></aside></section>
+      </main>
+      <section class="section-wrap widget-tools"><div><p class="eyebrow">WIDGET CONTROL</p><h2>Персональная панель</h2></div><button class="text-button" id="add-todo" type="button">+ Добавить список задач</button></section><section class="section-wrap dynamic-widgets" id="widget-mount"></section>
+      <footer class="footer section-wrap"><span>© 2026 DYSLEXIS / PERSONAL STATS</span><span>DATA FROM FACEIT · FACEIT ANALYSER</span></footer>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
